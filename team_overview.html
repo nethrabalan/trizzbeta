@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trizz Global</title>
+  <link href="navbar.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: inherit;
+      margin: 0;
+    }
+
+
+    
+    main {
+      background-color: #036348;
+      padding: 50px 20px;
+    }
+
+    .ourTeamHead {
+      margin: auto;
+      text-align: center;
+      color: #ffffff;
+      font-family: Berlin Sans FB;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .ourTeamHead::after {
+      content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 8px;
+            left: 50%;
+            transform: translateX(-50%); 
+            background: #ffffff;
+            transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .ourTeamHead:hover::after {
+      width: 30%;
+            right: 0;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      margin: 50px auto;
+    }
+
+    .team {
+      width: auto;
+      background-color: #0000007a;
+      padding: 10px 30px;
+      margin: 0 50px;
+      border-radius: 10px;
+      border: 0.1em solid yellow;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    .team:hover{
+      transform: translateY(-15px);
+    }
+
+    .team img {
+      padding: 20px;
+      width: 120px;
+      transition: transform .7s ease-in-out;
+      transition: width 0.5s ease;
+
+    }
+
+    .team figure img {
+      -webkit-transform: rotate(0) scale(1);
+      transform: rotate(0) scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .team figure:hover img {
+
+      -webkit-transform: rotate(15deg) scale(1.4);
+      transform: rotate(15deg) scale(1.4);
+    }
+
+
+    .team h3 {
+      color: #ffffff;
+      margin-bottom: 0px;
+      font-size: 2rem;
+      font-family: Bahnschrift SemiBold;
+      padding-bottom: 10px;
+      width: auto;
+      
+    }
+
+   
+  .View-button {
+  background-color: transparent;
+  border: 2px solid #8AD6B7;
+  color: #8AD6B7;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.View-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: #8AD6B7;
+  z-index: -1;
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.View-button:hover::before {
+  width: 100%;
+}
+
+.View-button:hover {
+  color: #036348;
+  background-color: #8AD6B7;
+}
+
+
+    
+  </style>
+</head>
+
+<body>
+  <header style="position: sticky;">
+    <div class="logo">
+      <img src="/static/trizz_logo.png"alt="Trizz Global Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/homepage.html" style="padding-left: 5px;padding-right: 5px;">Home</a></li>
+        <li><a href="/aboutuspage.html" style="padding-left: 5px;padding-right: 5px;">About</a></li>
+        <li><a href="/team_overview.html" style="padding-left: 5px;padding-right: 5px;">Team</a></li>
+        <li><a href="/gallery_page.html" style="padding-left: 5px;padding-right: 5px;">Gallery</a></li>
+      </ul>
+    </nav>
+    <div class="login">
+      <button>Login
+        <span></span><span></span><span></span><span></span>
+      </button>
+      
+    </div>
+  </header>
+  <main>
+    <h1 class="ourTeamHead">Our Teams</h1>
+
+    <div class="team-container">
+      <div class="team">
+        <figure><img src="/static/devops_icon.png" alt="Team 3 Icon"></figure>
+        <h3>DevOPS<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Raja Murugesan (XII C)</h3>
+       <a href = "devops_members.html"><button class="View-button">View Team</button></a> 
+      </div>
+      <div class="team">
+        <figure> <img src="/static/globaloutreach_icon.png" alt="Team 3 Icon"></figure>
+        <h3>Global Outreach<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Akhilesh.J.C (XI D)</h3>
+        <a href = "globaloutreach_members.html"><button class="View-button">View Team</button></a> 
+      </div>
+      <div class="team">
+        <figure> <img src="/static/coreteam_icon.png" alt="Team 3 Icon"></figure>
+        <h3>Core<br> <span style="font-size: 1.5rem;">Team</span></h3>
+        <h3 style="font-size: 1rem;">Headed By - Tejashwin (XII D)</h3>
+        <a href = "coreteam_members.html"><button class="View-button">View Team</button></a>
+      </div>
+    </div>
+  </main>
+  
+</body>
+
+
+</html>
